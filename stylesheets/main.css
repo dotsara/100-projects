@@ -5,6 +5,8 @@ html {
 body {
   /*background: #1E2E47;
   color: #256BD9;*/
+  display: flex;
+  font-family: 'Open Sans', sans-serif;
   text-align: center;
 }
 
@@ -20,12 +22,15 @@ section {
 ol > li {
   margin-bottom: .5rem;
 }
-.container {
-  margin: 0 auto;
-  width: 75%;
+
+footer {
+  font-size: .9rem;
 }
 
-
+.wrapper {
+  margin: 0 auto;
+  width: 65%;
+}
 
 /* media queries */
 @media (max-width: 900px) {
