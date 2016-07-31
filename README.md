@@ -15,3 +15,12 @@ I got the idea for this from [Jess](https://github.com/jessabean/100-javascript-
 
 If you'd like to suggest a project (or projects!) for me to work on, [open an issue and suggest away](../../issues)! :grinning:
 
+## resources
+
+* Colors
+ * [Colorrrs](http://hex.colorrrs.com/): hex-rgb
+ * [Spectral](http://jxnblk.com/Spectral/) by @jxnblk
+ * [Paletton](http://paletton.com/)
+* CSS3 things
+ * [CSS3 gen](http://css3gen.com/): text-shadow, box-shadow, gradients, etc.
+ * [gradient generator](http://www.cssmatic.com/gradient-generator)
