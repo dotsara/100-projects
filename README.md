@@ -9,6 +9,7 @@ I got the idea for this from [Jess](https://github.com/jessabean/100-javascript-
 2. [css-star-ratings](https://github.com/dotsara/css-star-ratings): &#9734; → &#9733;
 3. [Dick's Drive-In Calculator](https://github.com/dotsara/ddi-calc): :hamburger: :fries: :moneybag:
 4. [My First Node.js Server](https://github.com/dotsara/my-first-node-js-server): woo! suggested by @kennymeyers
+5. [clock!](https://github.com/dotsara/clock): :clock3:
 
 
 ## contributions
