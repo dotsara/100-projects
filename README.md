@@ -1,6 +1,6 @@
 # 100 projects
 
-I got the idea for this from [Jess](https://github.com/jessabean/100-javascript-projects), so let's see what sort of trouble I can get into, now! :tada:
+[Jess](https://github.com/jessabean/100-javascript-projects) gave me the idea for doing 100 web-related projects (thanks @jessabean!); my goal is to continue to develop primarily my javascript skills, however, I'm also interested in dipping a toe or two into design-related areas. And maybe some more Ruby things! :scream:
 
 
 ## projects
@@ -14,7 +14,7 @@ I got the idea for this from [Jess](https://github.com/jessabean/100-javascript-
 
 ## contributions
 
-If you'd like to suggest a project (or projects!) for me to work on, [open an issue and suggest away](../../issues)! :grinning:
+If you'd like to suggest a project (or projects!): [open an issue and suggest away](../../issues)! :grinning:
 
 ## resources
 
