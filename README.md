@@ -1,4 +1,4 @@
-# 100 projects
+# :sparkles: 100 projects :sparkles: 
 
 [Jess](https://github.com/jessabean/100-javascript-projects) gave me the idea for doing 100 web-related projects (thanks @jessabean!); my goal is to continue to develop primarily my javascript skills, however, I'm also interested in dipping a toe or two into design-related areas. And maybe some more Ruby things! :scream:
 
