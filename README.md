@@ -1,2 +1,11 @@
-# 100-projects
-100 projects in different languages, frameworks, etc.
+# Playtime! 🎳 / Drills 📋
+
+One of the ways that I learn best is by playing around with things and then also by doing drills (I still swim drills in the pool, for example). 
+
+So, that is what I am going to do on this branch! 
+
+## 2017
+
+### December
+
+* [JS: .map()](javascript-map.html)
