@@ -8,4 +8,4 @@ So, that is what I am going to do on this branch!
 
 ### December
 
-* [JS: .map()](javascript-map.html)
+* [JS: .map()](javascript-map.html), [Chrome console log of me playing around with `const hogsmeade`](jsmap-hogsmeade.txt)
