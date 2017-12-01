@@ -1,0 +1,26 @@
+10:56:18.896 hogsmeade
+10:56:18.906 (3) ["honeydukes", "three broomsticks", "shrieking shack"]
+10:57:13.551 const located = hogsmeade.map(function(spot) {
+    return spot + "is in hogsmeade";
+}
+10:57:13.559 VM163:3 Uncaught SyntaxError: missing ) after argument list
+10:57:27.456 const located = hogsmeade.map(function(spot) {
+    return spot + "is in hogsmeade";
+});
+10:57:27.461 undefined
+10:57:31.133 located
+10:57:31.136 (3) ["honeydukesis in hogsmeade", "three broomsticksis in hogsmeade", "shrieking shackis in hogsmeade"]
+10:57:39.347 const located = hogsmeade.map(function(spot) {
+    return spot + " is in hogsmeade";
+});
+10:57:39.349 VM186:1 Uncaught SyntaxError: Identifier 'located' has already been declared
+    at <anonymous>:1:1
+(anonymous) @ VM186:1
+10:58:01.251 // ha! right! no re-declaring constants. Ha!
+10:58:01.256 undefined
+10:58:09.812 const located_redux = hogsmeade.map(function(spot) {
+    return spot + " is in hogsmeade";
+});
+10:58:09.815 undefined
+10:58:16.056 located_redux
+10:58:16.058 (3) ["honeydukes is in hogsmeade", "three broomsticks is in hogsmeade", "shrieking shack is in hogsmeade"]
