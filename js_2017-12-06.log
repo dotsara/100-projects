@@ -152,3 +152,9 @@
 14:14:52.293 (7) [4, 5, 8, 1, 2, 24, 385]
 14:14:57.698 // yesssssss.
 14:14:57.703 undefined
+14:52:10.102 const another_copy_of_numbers = numbers.filter(function(number){
+	return number < 500;
+});
+14:52:10.107 undefined
+14:52:15.861 another_copy_of_numbers
+14:52:15.866 (7) [385, 24, 8, 5, 4, 2, 1]
