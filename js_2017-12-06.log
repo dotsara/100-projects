@@ -1,0 +1,154 @@
+13:34:20.813 bread
+13:34:20.822 (4) ["baguette", "como", "sliced", "brioche"]0: "baguette"1: "como"2: "sliced"3: "brioche"length: 4__proto__: Array(0)
+13:34:28.732 drinks
+13:34:28.737 {first: "diet coke", second: "diet dr. pepper", third: "rc cola"}first: "diet coke"second: "diet dr. pepper"third: "rc cola"__proto__: Objectconstructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()
+13:34:39.341 numbers
+13:34:39.345 (9) [4, 5, 8, 1, 2, 9787, 24, 385, 2948]
+13:35:12.326 // until very recently, I'd never noticed the "__proto__" part of the print-out when you call something.
+13:35:12.328 undefined
+13:35:35.232 // okay, I think I would like to… make a second array of numbers in order of largest to smallest
+13:35:35.237 undefined
+13:38:59.581 // so… take the array I have now and check for the largest number, put it in the first position of a new array, then loop through and put each next highest number in a successive position in the array? I suspect that's rather the long way around, but.
+13:38:59.587 undefined
+13:39:11.337 let ordered_numbers = [];
+13:39:11.341 undefined
+13:39:17.649 ordered_numbers
+13:39:17.654 []length: 0__proto__: Array(0)
+13:40:43.004 // wait, hang on.
+13:40:43.007 undefined
+13:40:47.738 numbers.sort
+13:40:47.741 ƒ sort() { [native code] }
+13:41:13.198 numbers.sort();
+13:41:13.202 (9) [1, 2, 24, 2948, 385, 4, 5, 8, 9787]
+13:41:27.869 // heh! not… precisely what I wanted, though.
+13:41:27.872 undefined
+13:42:53.113 // ahh, parameter values section: https://www.w3schools.com/jsref/jsref_sort.asp
+13:42:53.117 undefined
+13:42:59.784 // so…
+13:42:59.788 undefined
+13:43:03.737 numbers
+13:43:03.741 (9) [1, 2, 24, 2948, 385, 4, 5, 8, 9787]
+13:43:25.773 // ohhh… I didn't remember that sort() changes the original array; that's all right for this case, though.
+13:43:25.778 undefined
+13:43:39.868 numbers.sort(function(a,b){return a-b});
+13:43:39.873 (9) [1, 2, 4, 5, 8, 24, 385, 2948, 9787]
+13:43:50.702 // and then "just"…
+13:43:50.705 undefined
+13:44:01.334 numbers.reverse();
+13:44:01.339 (9) [9787, 2948, 385, 24, 8, 5, 4, 2, 1]
+13:44:39.596 // heh, loops! More complicated than it needed to be, self! but still! learned a thing, that's cool.
+13:44:39.601 undefined
+13:44:51.105 numbers 
+13:44:51.109 (9) [9787, 2948, 385, 24, 8, 5, 4, 2, 1]
+13:45:05.246 // okay, so how about a new array with just the values under… 500.
+13:45:05.251 undefined
+13:45:24.775 let numbersBelowFiveHundred = [];
+13:45:24.778 undefined
+13:47:38.419 function getNumbersUnderFiveHundred(number) {
+	if number < 500 {
+}
+13:47:38.424 VM509:2 Uncaught SyntaxError: Unexpected identifier
+13:48:13.544 function getNumbersUnderFiveHundred(number) {
+	if number < 500 {
+		return number;
+    };
+};
+13:48:13.552 VM565:2 Uncaught SyntaxError: Unexpected identifier
+13:49:19.074 function getNumbersUnderFiveHundred(number) {
+	if number < 500 
+		return number;
+    
+};
+13:49:19.079 VM567:2 Uncaught SyntaxError: Unexpected identifier
+13:49:40.113 function getNumbersUnderFiveHundred(number) {
+	if (number < 500) {
+		return number;
+    };
+};
+13:49:40.118 undefined
+13:49:57.313 // yeesh. Took me way too long to realize I was missing the () around the if condition.
+13:49:57.319 undefined
+13:50:24.234 numbers.map(getNumbersUnderFiveHundred);
+13:50:24.238 (9) [undefined, undefined, 385, 24, 8, 5, 4, 2, 1]
+13:51:00.505 // woo! oh wait, undefined values, heh. that's not what I want in the new array.
+13:51:00.513 undefined
+13:53:38.580 // maybe use an unless? unless (number < 500) and then just… return number? Hmmmm.
+13:53:38.584 undefined
+13:54:18.533 function getNumbersUnderFiveHundredAgain(number) {
+	unless (number < 500) {
+		return number
+    };
+};
+13:54:18.538 VM691:2 Uncaught SyntaxError: Unexpected token {
+13:56:08.299 function getNumbersUnderFiveHundredAgain(number) {
+	while (number < 500) {
+		return number
+    };
+};
+13:56:08.303 undefined
+13:56:26.985 numbers.map(getNumbersUnderFiveHundredAgain);
+13:56:26.990 (9) [undefined, undefined, 385, 24, 8, 5, 4, 2, 1]
+13:56:31.071 // nope.
+13:56:31.075 undefined
+14:00:59.670 // what about a function that walks through numbers and only pushes to numbersBelowFiveHundred if the value is < 500…
+14:00:59.675 undefined
+14:04:13.951 function thirdAttemptAtNumbersBelowFiveHundred(array) {
+	for (i=0; i < array.length; i++) {
+		if (array[i] < 500) {
+			numbersBelowFiveHundred.push(array[i]);
+        };
+    };
+};
+14:04:13.956 undefined
+14:04:22.781 thirdAttemptAtNumbersBelowFiveHundred(numbers);
+14:04:22.788 undefined
+14:04:36.462 numbersBelowFiveHundred
+14:04:36.468 (7) [385, 24, 8, 5, 4, 2, 1]
+14:04:39.994 // SWEET
+14:04:39.997 undefined
+14:04:46.382 // but also that seems like the long way around.
+14:04:46.384 undefined
+14:07:56.186 // let's see…
+14:07:56.207 undefined
+14:12:27.496 const new_numbers = [4, 5, 8, 1, 2, 9787, 24, 385, 2948];
+14:12:27.500 undefined
+14:12:37.924 const copy_of_new_numbers = [];
+14:12:37.926 undefined
+14:14:03.832 new_numbers.forEach{function(number){
+	if (item < 500) {
+		copy_of_new_numbers.push(item);
+    };	
+};
+14:14:03.837 VM1330:1 Uncaught SyntaxError: Unexpected token {
+14:14:30.980 new_numbers.forEach(function(number){
+	if (item < 500) {
+		copy_of_new_numbers.push(item);
+    };	
+});
+14:14:30.985 VM1342:2 Uncaught ReferenceError: item is not defined
+    at <anonymous>:2:2
+    at Array.forEach (<anonymous>)
+    at <anonymous>:1:13
+(anonymous) @ VM1342:2
+(anonymous) @ VM1342:1
+14:14:39.496 new_numbers.forEach(function(number){
+	if (item < 500) {
+		copy_of_new_numbers.push(number);
+    };	
+});
+14:14:39.501 VM1343:2 Uncaught ReferenceError: item is not defined
+    at <anonymous>:2:2
+    at Array.forEach (<anonymous>)
+    at <anonymous>:1:13
+(anonymous) @ VM1343:2
+(anonymous) @ VM1343:1
+14:14:46.136 new_numbers.forEach(function(number){
+	if (number < 500) {
+		copy_of_new_numbers.push(number);
+    };	
+});
+14:14:46.141 undefined
+14:14:52.287 copy_of_new_numbers
+14:14:52.293 (7) [4, 5, 8, 1, 2, 24, 385]
+14:14:57.698 // yesssssss.
+14:14:57.703 undefined
