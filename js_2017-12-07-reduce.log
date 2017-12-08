@@ -1,0 +1,145 @@
+16:14:26.697 years
+16:14:26.706 (6) [1982, 1994, 2015, 2002, 1945, 1861]
+16:14:41.871 years.reduce((sum, value) => sum + value, 1);
+16:14:41.874 11800
+16:16:02.053 years.reduce(function (a,b) {
+	console.log("a: " + a + "; b: " + b);
+	return a+b;
+}, 0);
+16:16:02.054 VM221:2 a: 0; b: 1982
+16:16:02.055 VM221:2 a: 1982; b: 1994
+16:16:02.055 VM221:2 a: 3976; b: 2015
+16:16:02.055 VM221:2 a: 5991; b: 2002
+16:16:02.055 VM221:2 a: 7993; b: 1945
+16:16:02.055 VM221:2 a: 9938; b: 1861
+16:16:02.070 11799
+16:16:29.930 years.reduce(function (a,b) {
+	console.log("a: " + a + "; b: " + b);
+	return a+b;
+	console.log("sum so far: " + a+b);
+}, 0);
+16:16:29.931 VM252:2 a: 0; b: 1982
+16:16:29.931 VM252:2 a: 1982; b: 1994
+16:16:29.932 VM252:2 a: 3976; b: 2015
+16:16:29.932 VM252:2 a: 5991; b: 2002
+16:16:29.932 VM252:2 a: 7993; b: 1945
+16:16:29.932 VM252:2 a: 9938; b: 1861
+16:16:29.939 11799
+16:16:41.855 years.reduce(function (a,b) {
+	console.log("a: " + a + "; b: " + b);
+	return a+b;
+	
+}, 0);
+16:16:41.856 VM253:2 a: 0; b: 1982
+16:16:41.856 VM253:2 a: 1982; b: 1994
+16:16:41.856 VM253:2 a: 3976; b: 2015
+16:16:41.856 VM253:2 a: 5991; b: 2002
+16:16:41.856 VM253:2 a: 7993; b: 1945
+16:16:41.857 VM253:2 a: 9938; b: 1861
+16:16:41.864 11799
+16:16:52.194 years.reduce(function (a,b) {
+	console.log("a: " + a + "; b: " + b);
+	console.log("sum so far: " + a+b);
+	return a+b;
+}, 0);
+16:16:52.195 VM254:2 a: 0; b: 1982
+16:16:52.195 VM254:3 sum so far: 01982
+16:16:52.196 VM254:2 a: 1982; b: 1994
+16:16:52.196 VM254:3 sum so far: 19821994
+16:16:52.196 VM254:2 a: 3976; b: 2015
+16:16:52.196 VM254:3 sum so far: 39762015
+16:16:52.196 VM254:2 a: 5991; b: 2002
+16:16:52.196 VM254:3 sum so far: 59912002
+16:16:52.196 VM254:2 a: 7993; b: 1945
+16:16:52.196 VM254:3 sum so far: 79931945
+16:16:52.196 VM254:2 a: 9938; b: 1861
+16:16:52.197 VM254:3 sum so far: 99381861
+16:16:52.208 11799
+16:17:28.711 // oohh, right "a" is "sum", so, ha. I see what I did there.
+16:17:28.717 undefined
+16:17:47.669 years.reduce(function (sum, value) {
+	console.log("sum: " + a + "; value: " + b);
+	console.log("sum so far: " + sum);
+	return a+b;
+}, 0);
+16:17:47.674 VM261:2 Uncaught ReferenceError: a is not defined
+    at <anonymous>:2:24
+    at Array.reduce (<anonymous>)
+    at <anonymous>:1:7
+(anonymous) @ VM261:2
+(anonymous) @ VM261:1
+16:17:56.062 years.reduce(function (sum, value) {
+	console.log("sum: " + sum + "; value: " + value);
+	console.log("sum so far: " + sum);
+	return a+b;
+}, 0);
+16:17:56.063 VM274:2 sum: 0; value: 1982
+16:17:56.064 VM274:3 sum so far: 0
+16:17:56.067 VM274:4 Uncaught ReferenceError: a is not defined
+    at <anonymous>:4:2
+    at Array.reduce (<anonymous>)
+    at <anonymous>:1:7
+(anonymous) @ VM274:4
+(anonymous) @ VM274:1
+16:18:07.166 years.reduce(function (sum, value) {
+	console.log("sum: " + sum + "; value: " + value);
+	console.log("sum so far: " + sum);
+	return sum+value;
+}, 0);
+16:18:07.167 VM289:2 sum: 0; value: 1982
+16:18:07.168 VM289:3 sum so far: 0
+16:18:07.168 VM289:2 sum: 1982; value: 1994
+16:18:07.168 VM289:3 sum so far: 1982
+16:18:07.168 VM289:2 sum: 3976; value: 2015
+16:18:07.168 VM289:3 sum so far: 3976
+16:18:07.168 VM289:2 sum: 5991; value: 2002
+16:18:07.168 VM289:3 sum so far: 5991
+16:18:07.168 VM289:2 sum: 7993; value: 1945
+16:18:07.168 VM289:3 sum so far: 7993
+16:18:07.168 VM289:2 sum: 9938; value: 1861
+16:18:07.169 VM289:3 sum so far: 9938
+16:18:07.174 11799
+16:18:41.726 // heh, replacing variable names really takes me longer than it should. Goof.
+16:18:41.732 undefined
+16:18:52.741 years.reduce(function (sum, value) {
+	console.log("sum: " + sum + "; value: " + value);
+	console.log("sum so far: " + sum+value);
+	return sum+value;
+}, 0);
+16:18:52.742 VM304:2 sum: 0; value: 1982
+16:18:52.742 VM304:3 sum so far: 01982
+16:18:52.742 VM304:2 sum: 1982; value: 1994
+16:18:52.742 VM304:3 sum so far: 19821994
+16:18:52.742 VM304:2 sum: 3976; value: 2015
+16:18:52.743 VM304:3 sum so far: 39762015
+16:18:52.743 VM304:2 sum: 5991; value: 2002
+16:18:52.743 VM304:3 sum so far: 59912002
+16:18:52.743 VM304:2 sum: 7993; value: 1945
+16:18:52.743 VM304:3 sum so far: 79931945
+16:18:52.743 VM304:2 sum: 9938; value: 1861
+16:18:52.743 VM304:3 sum so far: 99381861
+16:18:52.748 11799
+16:19:22.281 // oh yeah, no wait, that isn't going to work, that's just jamming the numbers into a longer number. *grumble*
+16:19:22.287 undefined
+16:20:14.788 years.reduce(function (sum, value) {
+	console.log("sum: " + sum + "; value: " + value);
+	let temp = sum+value; // maybe this? what do I expect here…
+	// well, that they'll be added and not just smashed together.
+	console.log("sum so far: " + temp);
+	return sum+value;
+}, 0);
+16:20:14.789 VM335:2 sum: 0; value: 1982
+16:20:14.790 VM335:5 sum so far: 1982
+16:20:14.790 VM335:2 sum: 1982; value: 1994
+16:20:14.790 VM335:5 sum so far: 3976
+16:20:14.790 VM335:2 sum: 3976; value: 2015
+16:20:14.790 VM335:5 sum so far: 5991
+16:20:14.790 VM335:2 sum: 5991; value: 2002
+16:20:14.790 VM335:5 sum so far: 7993
+16:20:14.790 VM335:2 sum: 7993; value: 1945
+16:20:14.790 VM335:5 sum so far: 9938
+16:20:14.791 VM335:2 sum: 9938; value: 1861
+16:20:14.791 VM335:5 sum so far: 11799
+16:20:14.796 11799
+16:20:19.163 // YAY!
+16:20:19.168 undefined
