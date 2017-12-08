@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+  <title>javascript: reduce</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+  <style>
+  body {
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    line-height: 150%;
+  }
+  section {width: 55%;}
+  a { color: #ea0b8c; }
+  code { color: #9eae3d; }
+  pre { color: #544aa1; }
+  </style>
+</head>
+<body>
+
+  <h1>.reduce()</h1>
+
+  <section>
+    <ul>
+      <li><a href="https://www.w3schools.com/jsref/jsref_reduce.asp">JavaScript Array reduce() Method</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce">Array.prototype.reduce()</a></li>
+    </ul>
+
+    <p>So, a pretty common function (callback) to be in your <code>reduce()</code> method is summing up the numbers in the array you're reducing.Seems legit.</p>
+    <pre>
+        const years = [1982, 1994, 2015, 2002, 1945, 1861];
+        years.reduce(function (sum, value) {
+          // I like console.log statements when I'm messing around.
+        	console.log("sum: " + sum + "; value: " + value);
+        	let temp = sum+value;
+        	console.log("sum so far: " + temp);
+        	return sum+value;
+        }, 0);
+    </pre>
+    
+    <p>There's also the <code>arrow-function</code> version, but that allows for slightly less <code>console.log()</code>.</p>
+    <pre>
+      const years = [1982, 1994, 2015, 2002, 1945, 1861];
+      years.reduce((sum, value) => sum + value, 1);
+    </pre>
+    
+    <p>It's worth noting that in the first version, I didn't provide an <code>InitialValue</code>, so it's assumed to be 0 and returns a value of 117999, whereas the arrow function version starts with 1 and returns 118000.</p>
+  </section>
+  <script>
+    const years = [1982, 1994, 2015, 2002, 1945, 1861];
+    
+    const bakery = {
+      "pastry" : "croissant",
+      "quiche" : "spinach",
+      "bread" : "brioche", 
+      "tea" : "english breakfast",
+      "espresso" : "latte"
+    };
+  </script>
+</body>
+</html>
