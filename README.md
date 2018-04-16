@@ -11,11 +11,9 @@ So, that is what I am going to do on this branch!
    As of now, there's no ride count available on SoulCycle. You just have to scroll your ride history and count individually. That's prone to miscounting, so I opened the browser Console and started trying things. This definitely wants refactoring, but it got me there, so. !
    
    ```
-   let myRides = document.getElementsByClassName("bike-number");
-   // copy the values into an Array
-   let myBikes = Object.values(myRides)
+   let myRides = Object.values(document.getElementsByClassName("bike-number"));
    // filter the Array by the presence of the word "bike"
-   const ridesTaken = myBikes.filter(bike => bike.innerText.includes('bike'));
+   const ridesTaken = myRides.filter(bike => bike.innerText.includes('bike'));
    ridesTaken.length
    ```
 
