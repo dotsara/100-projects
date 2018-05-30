@@ -13,6 +13,8 @@ So, that is what I am going to do on this branch!
    ```
    let myRides = Object.values(document.getElementsByClassName("bike-number"));
    // filter the Array by the presence of the word "bike"
+   // because myRides.length shows all the classes *booked* but only those with "bike"
+   // are classes I attended
    const ridesTaken = myRides.filter(bike => bike.innerText.includes('bike'));
    ridesTaken.length
    ```
