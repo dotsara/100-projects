@@ -77,14 +77,18 @@
     
     // we could just use map again to get what we want.
     // const win = winners.map((winner, i) => {name: winner, race: race, place: i});
-    // remember that _removing_ curly braces is an implicit return
-    // so to implicitly return an object literal, you wrap the object
-    // in parentheses. 
     
+    // but! remember that _removing_ curly braces is an implicit return
+    // so that version right above throws an error about an unknown `:` token
+    
+    // so to implicitly return an object literal, you wrap the object
+    // in parentheses, like so:
     //const win = winners.map((winner, i) => ({name: winner, race: race, place: i}));
+    
     // fun tip: in the browser console write: console.table(win)
     // and you get a pretty rad table view of `win`
     console.log(`Type in: console.table(win)`);
+    
     // you also get Shalane as place 0 because… `i` is zero-indexed
     // goofball.
     const win = winners.map((winner, i) => ({name: winner, race: race, place: i+1}));
@@ -94,7 +98,7 @@
     // called race and the value of that variable we're using will
     // be automagically included in our win array.
 
-
+    console.log(`Movin' on to one last arrow function demo. 🎉`);
     const ages = [23,75, 45, 91, 8, 33, 88]
     // remember filter will return results if they're true (won't: false)
     const older = ages.filter(age => age >= 50);
