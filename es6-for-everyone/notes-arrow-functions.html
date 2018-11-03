@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Praciticing: arrow functions</title>
+
+  <script>
+
+    const names = ['Isbjørn', 'Yorick', 'Potter'];
+    
+    // basic way to add text to the items in the names array:
+    const fullNames = names.map(function(name) {
+      return `${name} Fluff`;
+    });
+
+    // console.log(fullNames);
+
+    // arrow function version 1: 
+    // remove "function", add fat arrow
+    const fullNames2 = names.map((name) => {
+      return `${name} Fluff`;
+    });
+
+    // console.log(fullNames2);
+
+    // arrow function version 2: 
+    // if you only have 1 parameter (argument), you
+    // can drop the parentheses around it
+    const fullNames3 = names.map(name => {
+      return `${name} Fluff`;
+    });
+
+    // console.log(fullNames3);
+    
+    // arrow function version 3: 
+    // implicit return! drop "return" and bring that up
+    // to the first line and drop the curly braces
+    const fullNames4 = names.map(name => `${name} Fluff`);
+
+    // console.log(fullNames4);
+    
+    // arrow function version 4: 
+    // If you have _no_ arguments at all, you need to pass
+    // an empty argument
+    const fullNames5 = names.map((() =>`Super Fluff`));
+
+    console.log(fullNames5);
+
+    // arrow functions are always anonymous. 
+    // named functions are like this: 
+    function timeForCoffee(name) {
+      console.warn(`Yo, ${name}: it's time for coffee!'`); 
+    }
+
+    timeForCoffee('dot');
+
+    // you can put an arrow function into a variable, but that
+    // isn't super helpful w/r/t stack traces, but if you're not
+    // super concerned, then go for it.
+
+    const timeForCoffee2 = (name) => { console.warn(`Seriously, ${name}: get some coffee!`)}; 
+
+    timeForCoffee2('dot');
+
+    // More arrow function examples
+    console.log(`we're moving on to more exmaples, now 👋🏽`);
+    // this one is about maybe getting data *into* a more useful
+    // format from slightly more plain formats
+    const race = 'Marathon 26.2mi';
+    const winners = ['Shalane Flannigan', 'Des Linden', 'Kara Goucher'];
+
+    // ideally, we'd have gotten an object
+    // {
+    //   name: 'Shalane Flannigan',
+    //   place: 1,
+    //   race: race
+    // }
+    
+    // we could just use map again to get what we want.
+    // const win = winners.map((winner, i) => {name: winner, race: race, place: i});
+    // remember that _removing_ curly braces is an implicit return
+    // so to implicitly return an object literal, you wrap the object
+    // in parentheses. 
+    
+    //const win = winners.map((winner, i) => ({name: winner, race: race, place: i}));
+    // fun tip: in the browser console write: console.table(win)
+    // and you get a pretty rad table view of `win`
+    console.log(`Type in: console.table(win)`);
+    // you also get Shalane as place 0 because… `i` is zero-indexed
+    // goofball.
+    const win = winners.map((winner, i) => ({name: winner, race: race, place: i+1}));
+    
+    // if the part of the object that says `race: race` bugs you
+    // you can, in this case, just type `race` and the property'll be
+    // called race and the value of that variable we're using will
+    // be automagically included in our win array.
+
+
+    const ages = [23,75, 45, 91, 8, 33, 88]
+    // remember filter will return results if they're true (won't: false)
+    const older = ages.filter(age => age >= 50);
+    console.log(`Next up: filtering people (${ages.length}) over the age of 50 in our list of ages: `);
+    console.log(older);
+    console.log(`And the young folks are:`);
+    const young = ages.filter(age => age < 50); 
+    console.log(young);
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
