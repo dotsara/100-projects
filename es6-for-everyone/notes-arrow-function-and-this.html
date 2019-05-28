@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>arrow function and `this`</title>
+</head>
+<body>
+  <h1>Arrow functions and <code>this</code></h1>
+  <style>
+    .wrap {
+      min-height: 100vh;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      font-family: sans-serif;
+      font-weight: 100;
+      color:white;
+    }
+
+    /*
+      I want to use this photo: https://unsplash.com/photos/iecJiKe_RNg
+    */
+    .box {
+      background:black url(https://unsplash.it/1500/1500?image=560&blur=0.5) center fixed no-repeat;
+      width:50px;
+      height:50px;
+      padding:50px;
+      transition: width 0.2s, height 0.6s;
+      position: relative;
+    }
+
+    .box.opening {
+      width:500px;
+      height:500px;
+    }
+
+    .box h2 {
+      position: absolute;
+      width:100%;
+      font-size: 100px;
+      transform:translateX(-200%);
+      transition: all 0.5s;
+      top:0;
+    }
+
+    .box p {
+      position: absolute;
+      width:100%;
+      transform:translateX(200%);
+      transition: all 0.5s;
+      bottom:0;
+    }
+
+    .box.open > * {
+      transform:translateX(0%);
+    }
+  </style>
+
+  <div class="wrap">
+    <div class="box">
+      <h2>Sara!</h2>
+      <p class="social">@dotsara</p>
+    </div>
+  </div>
+
+  <script>
+
+    const box = document.querySelector('.box');
+    // console.log(box);
+    // in this case `this` is going to give us back the
+    // .box item.
+    // box.addEventListener('click', function() {
+    //   console.log(this);
+    // });
+    
+    // if we swap that function out for an arrow function…
+    // box.addEventListener('click', () => console.log(this));
+    // we get Window blah blah… because `this` isn't re-bound
+    // to the function, it is inhereting the scope of the 
+    // parent of the arrow function. 
+    
+    // so be careful with throwing `this` around. 
+    // for our purposes here, we can't use an arrow function here,
+    // we want to use `this`
+
+    box.addEventListener('click', function() {
+      // console.log(this);
+      // this.classList.toggle('opening');
+      // next stage, you think okay, setTimeout…
+      // setTimeout(function() {
+      //   this.classList.toggle('open');
+      //   // ^ throws an error because we've entered a new function
+      //   // and that function hasn't been bound to anything. !
+      //   // used to be you'd do the thing where you'd create
+      //   // var self = this;
+      //   // then you can do:
+      //   // self.classList.toggle('open')
+      //   // but we don't have to d that anymore!
+      //   // instead we can exploit the way arrow functions don't
+      //   // change `this`.
+      // });
+      // setTimeout(() => {
+      //   console.log(this);
+      //   this.classList.toggle('open');
+      // }, 500);
+      
+      // the closing animation is a little funky--the text kind of
+      // collapses inside the small box before disappearing.
+      // let's add some variables so we can get the classes applied
+      // in reverse order for the close: 
+      
+      let first = 'opening';
+      let second = 'open';
+      
+      // so already in an open state?
+      if(this.classList.contains(first)) {
+        [first, second] = [second, first]; 
+      }; 
+      
+      this.classList.toggle(first);
+      setTimeout(() => {
+        console.log(this);
+        this.classList.toggle(second);
+      }, 500);
+
+      
+    });
+    
+  </script>
+</body>
+</html>

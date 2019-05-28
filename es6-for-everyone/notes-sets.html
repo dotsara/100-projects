@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>practicing with Sets</title>
+</head>
+<body>
+
+  <script>
+    console.warn(`Using a line for a brunch place for our Set.`);
+
+    const brunch = new Set();
+    // as people come in
+    brunch.add('Moana');
+    brunch.add('Merida');
+    brunch.add('Mulan');
+    console.log(`Who's in line for brunch? ${Array.from(brunch.values()).join(', ')} (${brunch.size} people)`);
+
+    // ready to open the doors!
+    const line = brunch.values();
+    //line.next().value; // .next() will give us the generator item
+    console.log(line.next().value);
+    console.log(line.next().value);
+    console.log(line);
+    console.warn(`When you call .next() on a Set, that entry is removed from the SetIterator, but the Set is still the same.`)
+
+    console.log(`but people keep showing up! so we add them to the set, not the line.`);
+    brunch.add('Jasmine');
+    brunch.add('Tiana');
+    brunch.add('Elsa');
+    console.log(line.next().value);
+    console.log(line.next().value);
+  </script>
+</body>
+</html>

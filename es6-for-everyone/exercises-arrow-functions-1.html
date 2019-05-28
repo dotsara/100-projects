@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Arrow Functions</title>
+</head>
+<body>
+
+<ul>
+  <li data-time="5:17">Flexbox Video</li>
+  <li data-time="8:22">Flexbox Video</li>
+  <li data-time="3:34">Redux Video</li>
+  <li data-time="5:23">Flexbox Video</li>
+  <li data-time="7:12">Flexbox Video</li>
+  <li data-time="7:24">Redux Video</li>
+  <li data-time="6:46">Flexbox Video</li>
+  <li data-time="4:45">Flexbox Video</li>
+  <li data-time="4:40">Flexbox Video</li>
+  <li data-time="7:58">Redux Video</li>
+  <li data-time="11:51">Flexbox Video</li>
+  <li data-time="9:13">Flexbox Video</li>
+  <li data-time="5:50">Flexbox Video</li>
+  <li data-time="5:52">Redux Video</li>
+  <li data-time="5:49">Flexbox Video</li>
+  <li data-time="8:57">Flexbox Video</li>
+  <li data-time="11:29">Flexbox Video</li>
+  <li data-time="3:07">Flexbox Video</li>
+  <li data-time="5:59">Redux Video</li>
+  <li data-time="3:31">Flexbox Video</li>
+</ul>
+
+<script>
+
+  // // Select all the list items on the page and convert to array
+  // console.warn(`Instruction: select all the list items and convert to an array.`);
+  // // GAH! I was trying to use Array(document.blahBlah), but it's Array.from()! Goof.
+  // // (actually, i tried to do Array.of first, but hello, that just puts the *NodeList*
+  // // in an array. Oy.)
+  // const videos = Array.from(document.querySelectorAll("li"));
+  // console.log(`const videos = Array.from(document.querySelectorAll("li"))`);
+  // console.log(`and now videos is: ${videos}`);
+  // console.log(`We have ${videos.length} videos to work with.`);
+  //
+  // // Filter for only the elements that contain the word 'Flexbox'
+  // console.warn(`Instruction: filter for only flexbox videos.`)
+  // const flexVideos = videos.filter((video) => video.innerHTML.indexOf('Flexbox') === 0);
+  // console.log(`const flexVideos = videos.filter((video) => video.innerHTML.indexOf('Flexbox') === 0)`);
+  // console.log(`Now, we have ${flexVideos.length} videos to work with.`);
+  //
+  // // map down to a list of time strings
+  // console.warn(`Instruction: map down to a list of time strings`);
+  // const flexVideoTimes = flexVideos.map((video) => video.dataset.time);
+  // console.log(`const flexVideoTimes = flexVideos.map((video) => video.dataset.time)`);
+  // console.log(flexVideoTimes);
+  //
+  // // map to an array of seconds
+  // console.warn(`Instruction: map to an array of seconds`);
+  console.log(`Okay, this gets messy w/o being part of a chained arrow method. Following along w/ the video to disect.`);
+
+  const items = Array.from(document.querySelectorAll('[data-time]'))
+  // using the data attribute because all the LIs we want have that in common.
+  // gotta add Array.from() to be sure we get an array back.
+
+  // filter only for Flexbox videos
+  const filtered = items
+  .filter(item => item.textContent.includes('Flexbox'))
+  // map down to a list of time strings
+  .map(item => item.dataset.time) // this returns the data attribute
+  // map to an array of seconds
+  .map(timecode => { // not an arrow function b/c more than 1 thing here
+    // need to separate the parts of the time code
+    const parts = timecode.split(':').map(part => parseFloat(part));
+    // map it right away and use parseFloat to go from strings to numbers
+    return (parts[0] * 60) + parts[1];
+  })
+  // next up we reduce to get the total (takes 2 arguments)
+  .reduce((runningTotal, seconds) => runningTotal + seconds,0)
+  
+  console.log(filtered);
+    // const runningTime = filtered / 60;
+    // console.log(`runningTime = ${runningTime}`);
+    //
+    // // https://stackoverflow.com/a/52560608
+    // function convertToFormattedTime(seconds) {
+    //   console.log(`Converting time! 🕒`);
+    //   const hours = seconds % 3600;
+    //   console.log(`${hours} hours`);
+    //   const minutes = (seconds % 3600) / 60;
+    //   console.log(`${minutes} minutes`);
+    //   seconds %= 60;
+    //   console.log(`${seconds} seconds`);
+    //
+    //   return [hours, minutes, seconds].map(format).join(':');
+    // }
+    //
+    // function format (val) {
+    //   return ('0' + Math.floor(val)).slice(-2)
+    // }
+    //
+    // console.log(`Total running time converted to hours:minutes:seconds: ${convertToFormattedTime(runningTime)}`);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Iterables and looping</title>
+</head>
+<body>
+
+<section>
+    <h1>Iterables and looping</h1>
+    <h2>An iterable is anything you can loop over (i.e. an Array) </h2>
+</section>
+
+<section>
+    <h2>iterating over a DOM collection</h2>
+    <p>I am a paragraph (#01).</p>
+    <p>I am a paragraph (#02).</p>
+    <p>I am a paragraph (#03).</p>
+    <p>I am a paragraph (#04).</p>
+    <p>I am a paragraph (#05).</p>
+    <p>I am a paragraph (#06).</p>
+    <p>I am a paragraph (#07).</p>
+    <p>I am a paragraph (#08).</p>
+    <p>I am a paragraph (#09).</p>
+    <p>I am a paragraph (#10).</p>
+</section>
+
+<script>
+
+    const snacks = ['Crisps','Nuts','Fruit','Veg'];
+
+    // going through basic kinds of loops first, then we'll get to the good stuff.
+
+    // basic for loop.
+    // the syntax is kiiiinda weird, it doesn't read *super* nicely.
+    // for (let i = 0; i < snacks.length; i++) {
+    //     console.log(snacks[i]);
+    // }
+
+    // the .forEach Array method
+    // downsides: can't abort or stop the loop
+    // (so no break or continue)
+    // snacks.forEach((snack) => {
+    //     console.log(snack);
+    // })
+
+    // the for…in loop
+    // this gives you the index, not the value
+    // if you want the value: see the second version
+    // for (const snack in snacks) {
+    //     console.log(snack);
+    // }
+    // for (const index in snacks) {
+    //     console.log(snack[index]);
+    // }
+    // useful, _but_! if the Array prototype (for example) has been monkeyed with
+    // the for…in loop will iterate over additions to the prototype, too! (example in
+    // the video is the .shuffle method)
+
+
+    // and now: the for…of loop
+    for (const snack of snacks) {
+        console.log(snack);
+    }
+
+    // what if I want the index of the snack, too?
+    // there's no real good way to do it w/o having to
+    // find it every single time.
+    // except: generators! .entries()
+    // ^ did this in the browser console, assigning snacks.entries()
+    // to a variable and then calling that variable .next()
+    // for (const snack of snacks.entries()) {
+    //     console.log(snack);
+    // }
+
+    // could be annoying because now you get an array everytime, but that also
+    // means you can immediately destructure:
+    for (const [i, snack] of snacks.entries()) {
+        console.log(`${snack} is the ${i + 1} item`);
+    }
+
+    // when you're trying to iterate over the arguments object:
+
+    function addUpNumbers() {
+        //console.log(arguments); // this is a special word; it's Array-ish
+        // normally, you might want to "just" convert this to an array and use .reduce on it to add the numbers up
+        let total = 0;
+        for (const num of arguments) {
+            total += num;
+        }
+        console.log(total);
+        return total;
+    }
+
+    addUpNumbers(5, 10, 33, 65, 89, 986, 123, 887);
+
+    // you can also iterate over DOM collections
+    // in most browsers, they're not true Arrays, yet.
+    const ps = document.querySelectorAll('p');
+    console.log(ps);
+
+    for (const paragraph of ps) {
+        console.log(paragraph);
+    }
+
+    // one thing we haven't been able to iterate over is: Objects
+    const apple = {
+        color: 'Red',
+        size: 'Medium',
+        weight: 50,
+        sugar: 10
+    };
+
+    // you could do the below or you could "just" use the old for…in
+    for (const property of Object.keys(apple)) {
+        const value = apple[property];
+        console.log(value, property);
+    }
+</script>
+</body>
+</html>

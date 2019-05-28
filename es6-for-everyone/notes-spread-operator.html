@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Notes: spread & rest operators.</title>
+</head>
+<body>
+  <h1>Say hello to …Spread and …Rest</h1>
+  
+<script>
+
+  const featured = ['Deep Dish', 'Pepperoni', 'Hawaiian'];
+  const specialty = ['Meatzza', 'Spicy Mama', 'Margherita'];
+  
+  const deepDish = {
+    pizzaName: 'Deep Dish', 
+    size: 'Medium', 
+    ingredients: ['Marinara', 'Italian Sausage', 'Dough', 'Cheese']
+  };
+  
+  // spread operator takes every item from an iterable and apply it to the containing element. Where is that useful? 
+  // we want to make a third array just called pizzas
+  // you could do: 
+  // const pizzas = featured.concat(specialty);
+//   console.log(pizzas);
+//
+  // but what if you want to add another one in the middle…&nbsp;
+  // you'd have to do a lot of extra work: 
+  // let pizzas = [];
+  // pizzas = pizzas.concat(featured);
+  // pizzas.push('veg');
+  // pizzas.concat(specialty);
+  // console.log(pizzas); 
+  // Yikes. Instead: 
+  
+  // const pizzas = [...featured, ...specialty];
+  // console.log(pizzas);
+  
+  // and if you wanted to add something: 
+  const pizzas = [...featured, 'veg', ...specialty];
+  console.log(pizzas);
+  
+  // the old way to make a copy of an array 
+  // const fridayPizzas = [].concat(pizzas);
+  // b/c if you just assigned fridayPizzas = pizzas
+  // you're not making a copy, you're referencing, so if you change something in fridayPizzas, you'll really be changing it in pizzas. no bueno.
+  
+  // but now…
+  const fridayPizzas = [...pizzas];
+</script>
+</body>
+</html>
