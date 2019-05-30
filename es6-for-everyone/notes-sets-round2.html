@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Notes: Sets and WeakSets</title>
+</head>
+<body>
+
+<section>
+    <h1>Sets and WeakSets</h1>
+    <p>A set in JS is like a unique array (you can only ever add the same
+        item once) with an API for managing the items. Different from an
+        array in that you can't access the items individually and it's not
+        index-based.</p>
+</section>
+<script>
+    const shows = new Set();
+    shows.add('Killing Eve');
+    shows.add('Elementary');
+    shows.add('Shetland');
+
+    // tinkering in the console, finding SetIterator; can obvs either
+    // assign the generator to a variable or we could manually loop
+    // through with a for…of loop
+    for (const show of shows) {
+        console.log(show);
+    }
+
+    // second example
+    // you can declare the set with the values _while_ you make it
+    // or you can pass an existing array.
+    const characters = new Set(['Eve', 'Villanelle', 'Joan', 'Tosh']);
+
+    const sidekicks = ['Maximus', 'Mushu', 'Pascal', 'Abu'];
+    const sidekicksSet = new Set(sidekicks);
+
+    // third example: using brunch.
+    const brunch = new Set();
+    // as people come in, we'll add them to the waiting list
+    brunch.add('Katara');
+    brunch.add('Suki');
+    brunch.add('Toph');
+    // now we're ready to open!
+    const line = brunch.values(); // remember values is an iterator
+    //line.next().value; // value is the actual item. let's log it to see…
+    console.log(`Calling out who's up next in line for brunch.`);
+    console.log(line.next().value, `is up!`);
+    console.log(line.next().value, `is up!`);
+    // so ^ these folks are removed from the iterator, but the *Set* is still
+    // in tact and has everyone who's _been_ on the list.
+    brunch.add('Sokka');
+    brunch.add('Appa');
+    // it's fine to add people to the original set even after starting to use
+    // the SetIterator
+    console.log(line.next().value, `is up!`);
+    console.log(line.next().value, `is up!`);
+    console.log(line.next().value, `is up!`);
+
+
+    // on to WeakSets, now.
+    // what's important here is that a WeakSet can only ever contain objects
+    // and you cannot loop over (enumerate) over the WeakSet: so then why use?
+    // also there is no .clear method (like there is with Set): because
+    // WeakSets kind of clean themselves up--this has to do with garbage
+    // collection & memory.
+
+    // in his demo doc at the start of the video:
+    let dog1 = { name: 'Snickers', age: 3 };
+    let dog2 = { name: 'Dug', age: 5 };
+
+    const weakSauce = new WeakSet([dog1, dog2]);
+
+    // demonstrate the garbage collection.
+    console.log(weakSauce);
+    dog1 = null;
+    console.log(weakSauce);
+</script>
+</body>
+</html>

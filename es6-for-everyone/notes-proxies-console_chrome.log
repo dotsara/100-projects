@@ -1,0 +1,76 @@
+personProxy
+Proxy {name: "Merida", age: 20}
+personProxy.name
+notes-proxies.html:25 Someone is asking for  {name: "Merida", age: 20} name
+undefined
+personProxy.name
+notes-proxies.html:25 Someone is asking for  {name: "Merida", age: 20} name
+undefined
+Navigated to file:///Users/dot/Projects/100-projects/es6-for-everyone/notes-proxies.html
+personProxy.name
+notes-proxies.html:25 Someone is asking for  {name: "Merida", age: 20} name
+"Nope!"
+Navigated to file:///Users/dot/Projects/100-projects/es6-for-everyone/notes-proxies.html
+personProxy.name
+notes-proxies.html:25 Someone is asking for  {name: "Merida", age: 20} name
+"Merida"
+Navigated to file:///Users/dot/Projects/100-projects/es6-for-everyone/notes-proxies.html
+personProxy.name
+"Merida"
+Navigated to file:///Users/dot/Projects/100-projects/es6-for-everyone/notes-proxies.html
+personProxy.name
+"MERIDA"
+personProxy.cool = "    oohhhh snap! ";
+"    oohhhh snap! "
+personProxy.cool
+"OOHHHH SNAP!"
+Navigated to file:///Users/dot/Projects/100-projects/es6-for-everyone/notes-proxies.html
+phoneNumbers.home = '+846 --876-7143  '
+"+846 --876-7143  "
+phoneNumbers.work = '+123 905 4163  '
+"+123 905 4163  "
+phoneNumbers
+Proxy {home: "+846 --876-7143  ", work: "+123 905 4163  "}
+// we'll use the set() trap to clean-up the input
+undefined
+notes-proxies.html:49 Uncaught SyntaxError: Unexpected token )
+Navigated to file:///Users/dot/Projects/100-projects/es6-for-everyone/notes-proxies.html
+Navigated to file:///Users/dot/Projects/100-projects/es6-for-everyone/notes-proxies.html
+phoneNumbers.home
+undefined
+phoneNumbers.home = '+846 --876-7143  '
+"+846 --876-7143  "
+phoneNumbers.home
+"8468767143"
+// woo! stripped of dashes, spaces, etc.
+undefined
+// now we want to have the numbers consistently formatted when we pull numbers _out_ of phoneNumbers
+undefined
+phoneNumbers.work = '+123 905 4163  '
+"+123 905 4163  "
+phoneNumbers.work
+"1239054163"
+Navigated to file:///Users/dot/Projects/100-projects/es6-for-everyone/notes-proxies.html
+phoneNumbers.work = '+123 905 4163  '
+"+123 905 4163  "
+phoneNumbers.work
+"(123) 905-4163"
+Navigated to file:///Users/dot/Projects/100-projects/es6-for-everyone/notes-proxies.html
+notes-proxies.html:94 Uncaught Error: Oops! Looks like we already have a ID but with the case of id
+    at Object.set (notes-proxies.html:94)
+    at notes-proxies.html:107
+set @ notes-proxies.html:94
+(anonymous) @ notes-proxies.html:107
+Navigated to file:///Users/dot/Projects/100-projects/es6-for-everyone/notes-proxies.html
+safety
+Proxy {id: 100}
+safety.name = 'Mulan';
+"Mulan"
+safety.Name = 'Mushu';
+notes-proxies.html:94 Uncaught Error: Oops! Looks like we already have a Name but with the case of name
+    at Object.set (notes-proxies.html:94)
+    at <anonymous>:1:13
+set @ notes-proxies.html:94
+(anonymous) @ VM486:1
+// neat!
+undefined

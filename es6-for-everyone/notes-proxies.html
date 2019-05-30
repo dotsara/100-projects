@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Notes: proxies!</title>
+</head>
+<body>
+
+<section>
+    <h1>Proxies: allow you to overwrite an operation on an object</h1>
+</section>
+<script>
+
+    // First example: an object with a `name` that you want to fiddle with.
+    const person = {
+        name: 'Moana',
+        age: 20
+    };
+
+    // Proxies take 2 things: the target (i.e. the object you want to use)
+    // and the handler, this is where you specify all the operations you want
+    // to rewrite (object)
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy
+    // each thing inside the handler is a trap. see above
+    const personProxy = new Proxy(person, {
+        get(target, name) {
+            //console.log('Someone is asking for ', target, name);
+            // return 'Nope!';
+            // probably you wouldn't really do this when you jump in the
+            // middle of a get(), but it's a demo.
+            return target[name].toUpperCase();
+        },
+        set(target, name, value) {
+            if(typeof value === 'string') {
+                target[name] = value.trim();
+            }
+        }
+    });
+
+    // if you don't specify an override for a trap, the default for the
+    // object will take over.
+
+    personProxy.name = 'Merida';
+
+    // Second example: phone numbers
+    // assuming US numbers
+    const phoneHandler = {
+        set(target, name, value) {
+            target[name] = value.match(/[0-9]/g).join('');
+        },
+        get(target, name) {
+            // regex pulled from the internet
+            return target[name].replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3')
+        }
+    }
+    // not starting with a target object, instead starting with a blank one
+    const phoneNumbers = new Proxy({}, phoneHandler);
+
+    // Third example: using proxies to combat silly errors
+    // e.g. let's say if you're building a library for other devs to use
+    // you can build in affordances.
+    // Check if people are making mistakes or are they setting a property
+    // that already exists but might be in a different case.
+
+    // below is what's in his file at the start of the video as examples
+    // of how it might take a developer a while to figure out the right
+    // version of a property to use.
+    // a couple of consts and property assignments with duplicates, etc.
+    // const map = {};
+    //
+    // map.longitiude = 79.3423; // typo
+    // map.longitude = 79.3423;  // correct
+    // map.long = 79.3423;       // wrong key (property)
+    // map.lon = 79.3423;        // still wrong
+    // map.lng = 79.3423;        // Got it (why…?)
+    //
+    // const bender = { name: 'Toph' };
+    //
+    // bender.ID = 123; // nope
+    // bender.iD = 123; // still no
+    // bender.id = 123; // yes
+
+    // starting with a new safety object
+    const safeHandler = {
+        set(target, name, value) {
+            // make a list of like keys… & normalize
+            const likeKey = Object.keys(target).find(k => k.toLowerCase
+            () === name.toLowerCase());
+
+            // if there's no name in the target (i.e. trying to set a
+            // new property and there's is a key that's sort of like what
+            // they're trying to set, we'll throw an error.
+            if(!(name in target) && likeKey) {
+                throw new Error(`Oops! Looks like we already have a ${name} but with the case of ${likeKey}`)
+            }
+
+            // otherwise: set the new property
+            target[name] = value;
+        }
+    }
+    const safety = new Proxy({ id: 100}, safeHandler)
+
+    // testing how this works with safeHandler empty to start.
+    // let's say someone tries to set an `id` with a different
+    // case than what's intended (accepted) (`ID`), we'll throw an
+    // error and warn them.
+    safety.ID = 200;
+</script>
+</body>
+</html>

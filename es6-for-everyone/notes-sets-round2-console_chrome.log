@@ -1,0 +1,123 @@
+Navigated to file:///Users/dot/Projects/100-projects/es6-for-everyone/notes-sets-round2.html
+shows
+Set(3) {"Killing Eve", "Elementary", "Shetland"}
+shows.size
+3
+shows.delete('Elementary');
+true
+shows
+Set(2) {"Killing Eve", "Shetland"}
+// you don't have to figure out _where_ something is in a Set to delete it.
+undefined
+Navigated to file:///Users/dot/Projects/100-projects/es6-for-everyone/notes-sets-round2.html
+shows.values()
+SetIterator {"Killing Eve", "Elementary", "Shetland"}__proto__: Set Iterator[[IteratorHasMore]]: true[[IteratorIndex]]: 0[[IteratorKind]]: "values"[[Entries]]: Array(3)0: "Killing Eve"1: "Elementary"2: "Shetland"length: 3
+// SetIterator is a generator, which means we can loop!
+undefined
+const it = shows.values();
+undefined
+it.next();
+{value: "Killing Eve", done: false}
+it.next();
+{value: "Elementary", done: false}
+it.next();
+{value: "Shetland", done: false}
+it.next();
+{value: undefined, done: true}
+notes-sets-round2.html:26 Killing Eve
+notes-sets-round2.html:26 Elementary
+notes-sets-round2.html:26 Shetland
+Navigated to file:///Users/dot/Projects/100-projects/es6-for-everyone/notes-sets-round2.html
+people.keys();
+VM771:1 Uncaught ReferenceError: people is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM771:1
+shows.keys();
+SetIterator {"Killing Eve", "Elementary", "Shetland"}
+shows.entries();
+SetIterator {"Killing Eve" => "Killing Eve", "Elementary" => "Elementary", "Shetland" => "Shetland"}
+// keys and entries will be super helpful when we get to Maps.
+undefined
+notes-sets-round2.html:26 Killing Eve
+notes-sets-round2.html:26 Elementary
+notes-sets-round2.html:26 Shetland
+Navigated to file:///Users/dot/Projects/100-projects/es6-for-everyone/notes-sets-round2.html
+sidekicksSet
+Set(4) {"Maximus", "Mushu", "Pascal", "Abu"}
+// there's also a `.has` function.
+undefined
+characters.has('Mulan');
+false
+characters.has('Joan');
+true
+characters.has('Joan???');
+false
+// remember you can't find by location, so: [1] won't work
+undefined
+characters[1]
+undefined
+notes-sets-round2.html:26 Killing Eve
+notes-sets-round2.html:26 Elementary
+notes-sets-round2.html:26 Shetland
+notes-sets-round2.html:46 Katara  is up!
+Navigated to file:///Users/dot/Projects/100-projects/es6-for-everyone/notes-sets-round2.html
+notes-sets-round2.html:26 Killing Eve
+notes-sets-round2.html:26 Elementary
+notes-sets-round2.html:26 Shetland
+notes-sets-round2.html:46 Katara is up!
+Navigated to file:///Users/dot/Projects/100-projects/es6-for-everyone/notes-sets-round2.html
+notes-sets-round2.html:26 Killing Eve
+notes-sets-round2.html:26 Elementary
+notes-sets-round2.html:26 Shetland
+notes-sets-round2.html:46 Calling out who's up next in line for brunch.
+notes-sets-round2.html:47 Katara is up!
+Navigated to file:///Users/dot/Projects/100-projects/es6-for-everyone/notes-sets-round2.html
+notes-sets-round2.html:26 Killing Eve
+notes-sets-round2.html:26 Elementary
+notes-sets-round2.html:26 Shetland
+notes-sets-round2.html:46 Calling out who's up next in line for brunch.
+notes-sets-round2.html:47 Katara is up!
+notes-sets-round2.html:48 Suki is up!
+Navigated to file:///Users/dot/Projects/100-projects/es6-for-everyone/notes-sets-round2.html
+ line
+SetIterator {"Toph"}
+// when you call next, that item is removed from the iterator.
+undefined
+notes-sets-round2.html:26 Killing Eve
+notes-sets-round2.html:26 Elementary
+notes-sets-round2.html:26 Shetland
+notes-sets-round2.html:46 Calling out who's up next in line for brunch.
+notes-sets-round2.html:47 Katara is up!
+notes-sets-round2.html:48 Suki is up!
+notes-sets-round2.html:51 Toph is up!
+notes-sets-round2.html:52 Sokka is up!
+notes-sets-round2.html:53 Appa is up!
+Navigated to file:///Users/dot/Projects/100-projects/es6-for-everyone/notes-sets-round2.html
+// even though Sokka and Appa are created after starting to use the iterator, we can keep going.
+undefined
+// on to WeakSets, now.
+undefined
+notes-sets-round2.html:26 Killing Eve
+notes-sets-round2.html:26 Elementary
+notes-sets-round2.html:26 Shetland
+notes-sets-round2.html:46 Calling out who's up next in line for brunch.
+notes-sets-round2.html:47 Katara is up!
+notes-sets-round2.html:48 Suki is up!
+notes-sets-round2.html:55 Toph is up!
+notes-sets-round2.html:56 Sokka is up!
+notes-sets-round2.html:57 Appa is up!
+notes-sets-round2.html:74 WeakSet {{…}, {…}}__proto__: WeakSet[[Entries]]: Array(2)0: value: {name: "Dug", age: 5}1: Objectlength: 2
+notes-sets-round2.html:76 WeakSet {{…}, {…}}__proto__: WeakSet[[Entries]]: Array(2)0: value: {name: "Dug", age: 5}1: Objectlength: 2
+Navigated to file:///Users/dot/Projects/100-projects/es6-for-everyone/notes-sets-round2.html
+weakSauce
+WeakSet {{…}, {…}}__proto__: WeakSet[[Entries]]: Array(2)0: value: {name: "Dug", age: 5}1: Objectlength: 2
+// the garbage collection doesn't happen right away, you kinda have to wait around for it.
+undefined
+weakSauce
+WeakSet {{…}, {…}}__proto__: WeakSet[[Entries]]: Array(2)0: value: {name: "Dug", age: 5}1: Objectlength: 2
+// that said… it's kind of taking forever here in Chrome. I'll give it 3 full minutes to see if anything happens.
+undefined
+weakSauce
+WeakSet {{…}, {…}}
+// huh, nope, 5 minutes later, it hasn't been collected. Weird. But I'm not going to hang around fussing about it. On to Maps!
+undefined

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Notes: maps and weak maps</title>
+</head>
+<body>
+
+<section>
+    <h1>Maps and Weak Maps</h1>
+    <p>If Sets are to Arrays, then Maps are to Objects. But Maps have keys
+        and values, not just keys.</p>
+
+    <p>Buttons below are for a demo of keeping track of how many times a
+        button is clicked…each time it's clicked. </p>
+    <button>Ice cream 🍦</button>
+    <button>French fries 🍟</button>
+    <button>Pizza 🍕</button>
+    <button>Popcorn 🍿</button>
+    <button>Champagne 🍾</button>
+
+    <p>Conclusion-ish: if you don't want to have to worry about whether a
+        deleted object is referenced (post-delete) somewhere, that is a good
+    case for using <code>WeakMap</code> vs. a plain old <code>Map</code>.</p>
+</section>
+<script>
+
+    // both the keys and values can be anything (strings, numbers, etc.)
+    const dogs = new Map();
+
+    dogs.set('Snickers', 3);
+    dogs.set('Dug', 5);
+    dogs.set('Fido', 8);
+
+    // you can loop over maps in 2 ways: .forEach and for…of
+
+    dogs.forEach((val, key) => console.log(val, key));
+
+    for (const dog of dogs) {
+        console.log(dog);
+    }
+    // note, this gives us an array, so we can destructure:
+    for (const [key, val] of dogs) {
+        console.log(key, val);
+    }
+
+    // but why is any of this better than Sets?
+    // one of its unique properties is that you can use an object as the
+    // *key* in a map. So you can kind of use them like metadata dictionaries
+    // hold info about an object w/o necessarily putting that *on* the object
+
+    // const obj = {
+    //     {..} :
+    // }
+
+    // we're going to use the buttons themselves as the keys for keeping track
+    // of how many times a button is clicked (vs. keeping it right on the
+    // button itself which is kind of messy and let's say you delete a button
+    // then that count is lost.
+
+    const clickCounts = new Map();
+    const buttons = document.querySelectorAll('button');
+
+    buttons.forEach(button => {
+        clickCounts.set(button, 0);
+        button.addEventListener('click', function() {
+            const val = clickCounts.get(this); // this is scoped to the button
+            //console.log(val);
+            // now we'll implement the…increment, heh and console.log the
+            // whole map just to see how it all changes.
+            clickCounts.set(this, val + 1);
+            console.log(clickCounts);
+        })
+    });
+
+    // on to Weak Maps
+    // pretty much the same as a WeakSet, there's no size, it's no enumerable
+    // and if the items no longer exist anywhere else, they'll be garbage
+    // collected.
+
+    let house1 = { name: 'Hufflepuff' };
+    let house2 = { name: 'Ravenclaw' };
+
+    const strongMap = new Map();
+    const weakMap = new WeakMap();
+
+    strongMap.set(house1, 'Hufflepuff is named for Helga Hufflepuff.');
+    weakMap.set(house2, 'Ravenclaw is named for Rowena Ravenclaw.');
+
+    // now we'll delete them.
+    house1 = null;
+    house2 = null;
+</script>
+</body>
+</html>

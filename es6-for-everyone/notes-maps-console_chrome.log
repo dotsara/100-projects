@@ -1,0 +1,160 @@
+Navigated to file:///Users/dot/Projects/100-projects/es6-for-everyone/notes-maps.html
+dogs.has('snickers');
+false
+dogs.has('Snickers');
+true
+dogs.get('Snickers');
+3
+dogs.delete('Fido');
+true
+dogs
+Map(2) {"Snickers" => 3, "Dug" => 5}
+notes-maps.html:25 3 "Snickers"
+notes-maps.html:25 5 "Dug"
+notes-maps.html:25 8 "Fido"
+notes-maps.html:28 (2) ["Snickers", 3]
+notes-maps.html:28 (2) ["Dug", 5]
+notes-maps.html:28 (2) ["Fido", 8]
+Navigated to file:///Users/dot/Projects/100-projects/es6-for-everyone/notes-maps.html
+notes-maps.html:25 3 "Snickers"
+notes-maps.html:25 5 "Dug"
+notes-maps.html:25 8 "Fido"
+notes-maps.html:28 (2) ["Snickers", 3]
+notes-maps.html:28 (2) ["Dug", 5]
+notes-maps.html:28 (2) ["Fido", 8]
+notes-maps.html:32 Snickers 3
+notes-maps.html:32 Dug 5
+notes-maps.html:32 Fido 8
+Navigated to file:///Users/dot/Projects/100-projects/es6-for-everyone/notes-maps.html
+notes-maps.html:33 3 "Snickers"
+notes-maps.html:33 5 "Dug"
+notes-maps.html:33 8 "Fido"
+notes-maps.html:36 (2) ["Snickers", 3]
+notes-maps.html:36 (2) ["Dug", 5]
+notes-maps.html:36 (2) ["Fido", 8]
+notes-maps.html:40 Snickers 3
+notes-maps.html:40 Dug 5
+notes-maps.html:40 Fido 8
+Navigated to file:///Users/dot/Projects/100-projects/es6-for-everyone/notes-maps.html
+buttons
+NodeList(5) [button, button, button, button, button]0: button1: button2: button3: button4: buttonlength: 5__proto__: NodeList
+notes-maps.html:33 3 "Snickers"
+notes-maps.html:33 5 "Dug"
+notes-maps.html:33 8 "Fido"
+notes-maps.html:36 (2) ["Snickers", 3]
+notes-maps.html:36 (2) ["Dug", 5]
+notes-maps.html:36 (2) ["Fido", 8]
+notes-maps.html:40 Snickers 3
+notes-maps.html:40 Dug 5
+notes-maps.html:40 Fido 8
+Navigated to file:///Users/dot/Projects/100-projects/es6-for-everyone/notes-maps.html
+clickCounts
+Map(5) {button => 0, button => 0, button => 0, button => 0, button => 0}size: (...)__proto__: Map[[Entries]]: Array(5)0: {button => 0}key: buttonaccessKey: ""assignedSlot: nullattributeStyleMap: StylePropertyMap {size: 0}attributes: NamedNodeMap {length: 0}autocapitalize: ""autofocus: falsebaseURI: "file:///Users/dot/Projects/100-projects/es6-for-everyone/notes-maps.html"childElementCount: 0childNodes: NodeList [text]children: HTMLCollection []classList: DOMTokenList [value: ""]className: ""clientHeight: 21clientLeft: 1clientTop: 1clientWidth: 83contentEditable: "inherit"dataset: DOMStringMap {}dir: ""disabled: falsedraggable: falsefirstChild: textfirstElementChild: nullform: nullformAction: "file:///Users/dot/Projects/100-projects/es6-for-everyone/notes-maps.html"formEnctype: ""formMethod: ""formNoValidate: falseformTarget: ""hidden: falseid: ""innerHTML: "Ice cream 🍦"innerText: "Ice cream 🍦"inputMode: ""isConnected: trueisContentEditable: falselabels: NodeList []lang: ""lastChild: textlastElementChild: nulllocalName: "button"name: ""namespaceURI: "http://www.w3.org/1999/xhtml"nextElementSibling: buttonnextSibling: textnodeName: "BUTTON"nodeType: 1nodeValue: nullnonce: ""offsetHeight: 23offsetLeft: 8offsetParent: bodyoffsetTop: 137offsetWidth: 85onabort: nullonauxclick: nullonbeforecopy: nullonbeforecut: nullonbeforepaste: nullonblur: nulloncancel: nulloncanplay: nulloncanplaythrough: nullonchange: nullonclick: nullonclose: nulloncontextmenu: nulloncopy: nulloncuechange: nulloncut: nullondblclick: nullondrag: nullondragend: nullondragenter: nullondragleave: nullondragover: nullondragstart: nullondrop: nullondurationchange: nullonemptied: nullonended: nullonerror: nullonfocus: nullonfullscreenchange: nullonfullscreenerror: nullongotpointercapture: nulloninput: nulloninvalid: nullonkeydown: nullonkeypress: nullonkeyup: nullonload: nullonloadeddata: nullonloadedmetadata: nullonloadstart: nullonlostpointercapture: nullonmousedown: nullonmouseenter: nullonmouseleave: nullonmousemove: nullonmouseout: nullonmouseover: nullonmouseup: nullonmousewheel: nullonpaste: nullonpause: nullonplay: nullonplaying: nullonpointercancel: nullonpointerdown: nullonpointerenter: nullonpointerleave: nullonpointermove: nullonpointerout: nullonpointerover: nullonpointerup: nullonprogress: nullonratechange: nullonreset: nullonresize: nullonscroll: nullonsearch: nullonseeked: nullonseeking: nullonselect: nullonselectionchange: nullonselectstart: nullonstalled: nullonsubmit: nullonsuspend: nullontimeupdate: nullontoggle: nullonvolumechange: nullonwaiting: nullonwebkitfullscreenchange: nullonwebkitfullscreenerror: nullonwheel: nullouterHTML: "<button>Ice cream 🍦</button>"outerText: "Ice cream 🍦"ownerDocument: documentparentElement: sectionparentNode: sectionpart: DOMTokenList [value: ""]prefix: nullpreviousElementSibling: ppreviousSibling: textscrollHeight: 21scrollLeft: 0scrollTop: 0scrollWidth: 83shadowRoot: nullslot: ""spellcheck: truestyle: CSSStyleDeclaration {alignContent: "", alignItems: "", alignSelf: "", alignmentBaseline: "", all: "", …}tabIndex: 0tagName: "BUTTON"textContent: "Ice cream 🍦"title: ""translate: truetype: "submit"validationMessage: ""validity: ValidityState {valueMissing: false, typeMismatch: false, patternMismatch: false, tooLong: false, tooShort: false, …}value: ""willValidate: true__proto__: HTMLButtonElementvalue: 01: {button => 0}2: {button => 0}3: {button => 0}4: {button => 0}length: 5
+notes-maps.html:33 3 "Snickers"
+notes-maps.html:33 5 "Dug"
+notes-maps.html:33 8 "Fido"
+notes-maps.html:36 (2) ["Snickers", 3]
+notes-maps.html:36 (2) ["Dug", 5]
+notes-maps.html:36 (2) ["Fido", 8]
+notes-maps.html:40 Snickers 3
+notes-maps.html:40 Dug 5
+notes-maps.html:40 Fido 8
+Navigated to file:///Users/dot/Projects/100-projects/es6-for-everyone/notes-maps.html
+buttons
+NodeList(5) [button, button, button, button, button]
+clickCounts
+Map(5) {button => 0, button => 0, button => 0, button => 0, button => 0}size: (...)__proto__: Map[[Entries]]: Array(5)0: {button => 0}1: {button => 0}2: {button => 0}3: {button => 0}4: {button => 0}length: 5
+notes-maps.html:64 0
+notes-maps.html:66 Map(5) {button => 0, button => 1, button => 0, button => 0, button => 0}
+notes-maps.html:64 0
+notes-maps.html:66 Map(5) {button => 0, button => 1, button => 1, button => 0, button => 0}
+notes-maps.html:64 0
+notes-maps.html:66 Map(5) {button => 0, button => 1, button => 1, button => 1, button => 0}
+notes-maps.html:64 0
+notes-maps.html:66 Map(5) {button => 1, button => 1, button => 1, button => 1, button => 0}
+notes-maps.html:64 0
+notes-maps.html:66 Map(5) {button => 1, button => 1, button => 1, button => 1, button => 1}
+notes-maps.html:64 1
+notes-maps.html:66 Map(5) {button => 1, button => 1, button => 1, button => 1, button => 2}
+notes-maps.html:64 2
+notes-maps.html:66 Map(5) {button => 1, button => 1, button => 1, button => 1, button => 3}
+notes-maps.html:64 3
+notes-maps.html:66 Map(5) {button => 1, button => 1, button => 1, button => 1, button => 4}
+notes-maps.html:64 4
+notes-maps.html:66 Map(5) {button => 1, button => 1, button => 1, button => 1, button => 5}
+notes-maps.html:64 5
+notes-maps.html:66 Map(5) {button => 1, button => 1, button => 1, button => 1, button => 6}
+notes-maps.html:64 6
+notes-maps.html:66 Map(5) {button => 1, button => 1, button => 1, button => 1, button => 7}
+notes-maps.html:64 7
+notes-maps.html:66 Map(5) {button => 1, button => 1, button => 1, button => 1, button => 8}
+notes-maps.html:64 8
+notes-maps.html:66 Map(5) {button => 1, button => 1, button => 1, button => 1, button => 9}
+notes-maps.html:64 1
+notes-maps.html:66 Map(5) {button => 1, button => 1, button => 2, button => 1, button => 9}
+notes-maps.html:64 2
+notes-maps.html:66 Map(5) {button => 1, button => 1, button => 3, button => 1, button => 9}
+notes-maps.html:64 3
+notes-maps.html:66 Map(5) {button => 1, button => 1, button => 4, button => 1, button => 9}size: (...)__proto__: Map[[Entries]]: Array(5)0: {button => 1}1: {button => 1}2: {button => 4}key: buttonaccessKey: ""assignedSlot: nullattributeStyleMap: StylePropertyMap {size: 0}attributes: NamedNodeMap {length: 0}autocapitalize: ""autofocus: falsebaseURI: "file:///Users/dot/Projects/100-projects/es6-for-everyone/notes-maps.html"childElementCount: 0childNodes: NodeList [text]children: HTMLCollection []classList: DOMTokenList [value: ""]className: ""clientHeight: 21clientLeft: 1clientTop: 1clientWidth: 60contentEditable: "inherit"dataset: DOMStringMap {}dir: ""disabled: falsedraggable: falsefirstChild: textfirstElementChild: nullform: nullformAction: "file:///Users/dot/Projects/100-projects/es6-for-everyone/notes-maps.html"formEnctype: ""formMethod: ""formNoValidate: falseformTarget: ""hidden: falseid: ""innerHTML: "Pizza 🍕"innerText: "Pizza 🍕"inputMode: ""isConnected: trueisContentEditable: falselabels: NodeList []lang: ""lastChild: textlastElementChild: nulllocalName: "button"name: ""namespaceURI: "http://www.w3.org/1999/xhtml"nextElementSibling: buttonnextSibling: textnodeName: "BUTTON"nodeType: 1nodeValue: nullnonce: ""offsetHeight: 23offsetLeft: 198offsetParent: bodyoffsetTop: 137offsetWidth: 62onabort: nullonauxclick: nullonbeforecopy: nullonbeforecut: nullonbeforepaste: nullonblur: nulloncancel: nulloncanplay: nulloncanplaythrough: nullonchange: nullonclick: nullonclose: nulloncontextmenu: nulloncopy: nulloncuechange: nulloncut: nullondblclick: nullondrag: nullondragend: nullondragenter: nullondragleave: nullondragover: nullondragstart: nullondrop: nullondurationchange: nullonemptied: nullonended: nullonerror: nullonfocus: nullonfullscreenchange: nullonfullscreenerror: nullongotpointercapture: nulloninput: nulloninvalid: nullonkeydown: nullonkeypress: nullonkeyup: nullonload: nullonloadeddata: nullonloadedmetadata: nullonloadstart: nullonlostpointercapture: nullonmousedown: nullonmouseenter: nullonmouseleave: nullonmousemove: nullonmouseout: nullonmouseover: nullonmouseup: nullonmousewheel: nullonpaste: nullonpause: nullonplay: nullonplaying: nullonpointercancel: nullonpointerdown: nullonpointerenter: nullonpointerleave: nullonpointermove: nullonpointerout: nullonpointerover: nullonpointerup: nullonprogress: nullonratechange: nullonreset: nullonresize: nullonscroll: nullonsearch: nullonseeked: nullonseeking: nullonselect: nullonselectionchange: nullonselectstart: nullonstalled: nullonsubmit: nullonsuspend: nullontimeupdate: nullontoggle: nullonvolumechange: nullonwaiting: nullonwebkitfullscreenchange: nullonwebkitfullscreenerror: nullonwheel: nullouterHTML: "<button>Pizza 🍕</button>"outerText: "Pizza 🍕"ownerDocument: documentparentElement: sectionparentNode: sectionpart: DOMTokenList [value: ""]prefix: nullpreviousElementSibling: buttonpreviousSibling: textscrollHeight: 21scrollLeft: 0scrollTop: 0scrollWidth: 60shadowRoot: nullslot: ""spellcheck: truestyle: CSSStyleDeclaration {alignContent: "", alignItems: "", alignSelf: "", alignmentBaseline: "", all: "", …}tabIndex: 0tagName: "BUTTON"textContent: "Pizza 🍕"title: ""translate: truetype: "submit"validationMessage: ""validity: ValidityState {valueMissing: false, typeMismatch: false, patternMismatch: false, tooLong: false, tooShort: false, …}value: ""willValidate: true__proto__: HTMLButtonElementvalue: 43: {button => 1}4: {button => 9}length: 5
+// nifty.
+undefined
+notes-maps.html:33 3 "Snickers"
+notes-maps.html:33 5 "Dug"
+notes-maps.html:33 8 "Fido"
+notes-maps.html:36 (2) ["Snickers", 3]
+notes-maps.html:36 (2) ["Dug", 5]
+notes-maps.html:36 (2) ["Fido", 8]
+notes-maps.html:40 Snickers 3
+notes-maps.html:40 Dug 5
+notes-maps.html:40 Fido 8
+Navigated to file:///Users/dot/Projects/100-projects/es6-for-everyone/notes-maps.html
+notes-maps.html:33 3 "Snickers"
+notes-maps.html:33 5 "Dug"
+notes-maps.html:33 8 "Fido"
+notes-maps.html:36 (2) ["Snickers", 3]
+notes-maps.html:36 (2) ["Dug", 5]
+notes-maps.html:36 (2) ["Fido", 8]
+notes-maps.html:40 Snickers 3
+notes-maps.html:40 Dug 5
+notes-maps.html:40 Fido 8
+Navigated to file:///Users/dot/Projects/100-projects/es6-for-everyone/notes-maps.html
+strongMap
+Map(2) {{…} => "Hufflepuff is named for Helga Hufflepuff.", {…} => "Ravenclaw is named for Rowena Ravenclaw."}size: (...)__proto__: Map[[Entries]]: Array(2)0: {Object => "Hufflepuff is named for Helga Hufflepuff."}1: {Object => "Ravenclaw is named for Rowena Ravenclaw."}length: 2
+notes-maps.html:33 3 "Snickers"
+notes-maps.html:33 5 "Dug"
+notes-maps.html:33 8 "Fido"
+notes-maps.html:36 (2) ["Snickers", 3]
+notes-maps.html:36 (2) ["Dug", 5]
+notes-maps.html:36 (2) ["Fido", 8]
+notes-maps.html:40 Snickers 3
+notes-maps.html:40 Dug 5
+notes-maps.html:40 Fido 8
+Navigated to file:///Users/dot/Projects/100-projects/es6-for-everyone/notes-maps.html
+strongMap
+Map(1) {{…} => "Hufflepuff is named for Helga Hufflepuff."}
+weakMap
+WeakMap {{…} => "Ravenclaw is named for Rowena Ravenclaw."}
+weakMap.size
+undefined
+notes-maps.html:33 3 "Snickers"
+notes-maps.html:33 5 "Dug"
+notes-maps.html:33 8 "Fido"
+notes-maps.html:36 (2) ["Snickers", 3]
+notes-maps.html:36 (2) ["Dug", 5]
+notes-maps.html:36 (2) ["Fido", 8]
+notes-maps.html:40 Snickers 3
+notes-maps.html:40 Dug 5
+notes-maps.html:40 Fido 8
+Navigated to file:///Users/dot/Projects/100-projects/es6-for-everyone/notes-maps.html
+strongMap
+Map(1) {{…} => "Hufflepuff is named for Helga Hufflepuff."}
+weakMap
+WeakMap {{…} => "Ravenclaw is named for Rowena Ravenclaw."}
+house1
+null
+strongMap
+Map(1) {{…} => "Hufflepuff is named for Helga Hufflepuff."}
+weakMap
+WeakMap {}
+// notice that strongMap is still holding on to the object, house1, as a key even though it's been garbage collected. Whereas weakMap isn't. What strongMap is doing is a memory leak; so if you need to not worry that a deleted object will still be referenced somewhere, that would be a good case for a WeakMap over a Map.
+undefined
