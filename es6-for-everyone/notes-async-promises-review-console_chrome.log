@@ -1,0 +1,153 @@
+notes-async.html:14 Promise {<pending>}__proto__: Promise[[PromiseStatus]]: "resolved"[[PromiseValue]]: Response
+Navigated to file:///Users/dot/Projects/100-projects/es6-for-everyone/notes-async.html
+notes-async.html:14 Promise {<pending>}
+Navigated to file:///Users/dot/Projects/100-projects/es6-for-everyone/notes-async.html
+notes-async.html:20 Response {type: "cors", url: "https://api.github.com/users/dotsara", redirected: false, status: 200, ok: true, …}body: (...)bodyUsed: falseheaders: Headers {}ok: trueredirected: falsestatus: 200statusText: "OK"type: "cors"url: "https://api.github.com/users/dotsara"__proto__: Response
+// the thing is: fetch doesn't assume JSON, you have to specify it.
+undefined
+notes-async.html:14 Promise {<pending>}
+Navigated to file:///Users/dot/Projects/100-projects/es6-for-everyone/notes-async.html
+notes-async.html:30 {login: "dotsara", id: 339829, node_id: "MDQ6VXNlcjMzOTgyOQ==", avatar_url: "https://avatars3.githubusercontent.com/u/339829?v=4", gravatar_id: "", …}avatar_url: "https://avatars3.githubusercontent.com/u/339829?v=4"bio: "I am a rocker, I rock out. Also a juniper enthusiast. she/her"blog: "http://toolbox.dotsara.com"company: nullcreated_at: "2010-07-21T15:03:24Z"email: nullevents_url: "https://api.github.com/users/dotsara/events{/privacy}"followers: 15followers_url: "https://api.github.com/users/dotsara/followers"following: 17following_url: "https://api.github.com/users/dotsara/following{/other_user}"gists_url: "https://api.github.com/users/dotsara/gists{/gist_id}"gravatar_id: ""hireable: nullhtml_url: "https://github.com/dotsara"id: 339829location: nulllogin: "dotsara"name: "Sara"node_id: "MDQ6VXNlcjMzOTgyOQ=="organizations_url: "https://api.github.com/users/dotsara/orgs"public_gists: 9public_repos: 32received_events_url: "https://api.github.com/users/dotsara/received_events"repos_url: "https://api.github.com/users/dotsara/repos"site_admin: falsestarred_url: "https://api.github.com/users/dotsara/starred{/owner}{/repo}"subscriptions_url: "https://api.github.com/users/dotsara/subscriptions"type: "User"updated_at: "2019-05-30T20:34:34Z"url: "https://api.github.com/users/dotsara"__proto__: Object
+notes-async.html:14 Promise {<pending>}
+Navigated to file:///Users/dot/Projects/100-projects/es6-for-everyone/notes-async.html
+notes-async.html:34 GET https://apijithub.com/users/dotsara net::ERR_NAME_NOT_RESOLVED
+(anonymous) @ notes-async.html:34
+notes-async.html:42 Hit an error!
+notes-async.html:43 TypeError: Failed to fetch
+(anonymous) @ notes-async.html:43
+Promise.catch (async)
+(anonymous) @ notes-async.html:41
+notes-async.html:17 Promise {<pending>}
+Navigated to file:///Users/dot/Projects/100-projects/es6-for-everyone/notes-async.html
+notes-async.html:37 GET https://apijithub.com/users/dotsara net::ERR_NAME_NOT_RESOLVED
+(anonymous) @ notes-async.html:37
+notes-async.html:45 Hit an error!
+notes-async.html:46 TypeError: Failed to fetch
+(anonymous) @ notes-async.html:46
+Promise.catch (async)
+(anonymous) @ notes-async.html:44
+notes-async.html:53 MediaStream {id: "3KCxeUGcTz3C6GlCIivhBQxOBQs8pqY30Ob8", active: true, onaddtrack: null, onremovetrack: null, onactive: null, …}active: trueid: "3KCxeUGcTz3C6GlCIivhBQxOBQs8pqY30Ob8"onactive: nullonaddtrack: nulloninactive: nullonremovetrack: null__proto__: MediaStream
+notes-async.html:17 Promise {<pending>}
+Navigated to file:///Users/dot/Projects/100-projects/es6-for-everyone/notes-async.html
+notes-async.html:37 GET https://apijithub.com/users/dotsara net::ERR_NAME_NOT_RESOLVED
+(anonymous) @ notes-async.html:37
+notes-async.html:45 Hit an error!
+notes-async.html:46 TypeError: Failed to fetch
+(anonymous) @ notes-async.html:46
+Promise.catch (async)
+(anonymous) @ notes-async.html:44
+notes-async.html:17 Promise {<pending>}
+Navigated to file:///Users/dot/Projects/100-projects/es6-for-everyone/notes-async.html
+notes-async.html:37 GET https://apijithub.com/users/dotsara net::ERR_NAME_NOT_RESOLVED
+(anonymous) @ notes-async.html:37
+notes-async.html:45 Hit an error!
+notes-async.html:46 TypeError: Failed to fetch
+(anonymous) @ notes-async.html:46
+Promise.catch (async)
+(anonymous) @ notes-async.html:44
+notes-async.html:17 Promise {<pending>}
+Navigated to file:///Users/dot/Projects/100-projects/es6-for-everyone/notes-async.html
+notes-async.html:37 GET https://apijithub.com/users/dotsara net::ERR_NAME_NOT_RESOLVED
+(anonymous) @ notes-async.html:37
+notes-async.html:45 Hit an error!
+notes-async.html:46 TypeError: Failed to fetch
+(anonymous) @ notes-async.html:46
+Promise.catch (async)
+(anonymous) @ notes-async.html:44
+notes-async.html:1 Uncaught (in promise) DOMException
+Promise.then (async)
+(anonymous) @ notes-async.html:60
+notes-async.html:17 Promise {<pending>}
+notes-async.html:37 GET https://apijithub.com/users/dotsara net::ERR_NAME_NOT_RESOLVED
+(anonymous) @ notes-async.html:37
+notes-async.html:45 Hit an error!
+notes-async.html:46 TypeError: Failed to fetch
+(anonymous) @ notes-async.html:46
+Promise.catch (async)
+(anonymous) @ notes-async.html:44
+Navigated to file:///Users/dot/Projects/100-projects/es6-for-everyone/notes-async.html
+notes-async.html:66 DOMException
+(anonymous) @ notes-async.html:66
+Promise.catch (async)
+(anonymous) @ notes-async.html:65
+notes-async.html:17 Promise {<pending>}
+notes-async.html:37 GET https://apijithub.com/users/dotsara net::ERR_NAME_NOT_RESOLVED
+(anonymous) @ notes-async.html:37
+notes-async.html:45 Hit an error!
+notes-async.html:46 TypeError: Failed to fetch
+(anonymous) @ notes-async.html:46
+Promise.catch (async)
+(anonymous) @ notes-async.html:44
+Navigated to file:///Users/dot/Projects/100-projects/es6-for-everyone/notes-async.html
+notes-async.html:66 DOMException
+(anonymous) @ notes-async.html:66
+Promise.catch (async)
+(anonymous) @ notes-async.html:65
+notes-async.html:17 Promise {<pending>}
+notes-async.html:37 GET https://apijithub.com/users/dotsara net::ERR_NAME_NOT_RESOLVED
+(anonymous) @ notes-async.html:37
+notes-async.html:45 Hit an error!
+notes-async.html:46 TypeError: Failed to fetch
+(anonymous) @ notes-async.html:46
+Promise.catch (async)
+(anonymous) @ notes-async.html:44
+Navigated to file:///Users/dot/Projects/100-projects/es6-for-everyone/notes-async.html
+notes-async.html:66 DOMException
+(anonymous) @ notes-async.html:66
+Promise.catch (async)
+(anonymous) @ notes-async.html:65
+notes-async.html:17 Promise {<pending>}
+Navigated to file:///Users/dot/Projects/100-projects/es6-for-everyone/notes-async.html
+notes-async.html:37 GET https://apijithub.com/users/dotsara net::ERR_NAME_NOT_RESOLVED
+(anonymous) @ notes-async.html:37
+notes-async.html:45 Hit an error!
+notes-async.html:46 TypeError: Failed to fetch
+(anonymous) @ notes-async.html:46
+Promise.catch (async)
+(anonymous) @ notes-async.html:44
+notes-async.html:17 Promise {<pending>}
+Navigated to file:///Users/dot/Projects/100-projects/es6-for-everyone/notes-async.html
+notes-async.html:37 GET https://apijithub.com/users/dotsara net::ERR_NAME_NOT_RESOLVED
+(anonymous) @ notes-async.html:37
+notes-async.html:45 Hit an error!
+notes-async.html:46 TypeError: Failed to fetch
+(anonymous) @ notes-async.html:46
+Promise.catch (async)
+(anonymous) @ notes-async.html:44
+// Hmm. I'm not getting the same feedback in the console that Wes is with NavigatorUserMediaError, not sure why, though. Gonna soldier on.
+undefined
+notes-async.html:17 Promise {<pending>}
+Navigated to file:///Users/dot/Projects/100-projects/es6-for-everyone/notes-async.html
+notes-async.html:66 DOMException
+(anonymous) @ notes-async.html:66
+Promise.catch (async)
+(anonymous) @ notes-async.html:65
+notes-async.html:18 Promise {<pending>}
+Navigated to file:///Users/dot/Projects/100-projects/es6-for-everyone/notes-async.html
+notes-async.html:86 Done for 1000 ms
+notes-async.html:18 Promise {<pending>}
+Navigated to file:///Users/dot/Projects/100-projects/es6-for-everyone/notes-async.html
+notes-async.html:112 Done for 1000 ms
+notes-async.html:116 Done for 500 ms
+notes-async.html:120 Done for 600 ms
+notes-async.html:128 There was a mistake
+(anonymous) @ notes-async.html:128
+Promise.catch (async)
+(anonymous) @ notes-async.html:127
+notes-async.html:129 That is too small a value
+(anonymous) @ notes-async.html:129
+Promise.catch (async)
+(anonymous) @ notes-async.html:127
+notes-async.html:18 Promise {<pending>}
+Navigated to file:///Users/dot/Projects/100-projects/es6-for-everyone/notes-async.html
+notes-async.html:112 Done for 1000 ms
+notes-async.html:116 Done for 500 ms
+notes-async.html:120 Done for 600 ms
+notes-async.html:128 There was a mistake
+(anonymous) @ notes-async.html:128
+Promise.catch (async)
+(anonymous) @ notes-async.html:127
+notes-async.html:129 100 is too small a value
+(anonymous) @ notes-async.html:129
+Promise.catch (async)
+(anonymous) @ notes-async.html:127
