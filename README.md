@@ -21,12 +21,14 @@ If you'd like to suggest a project (or projects!): [open an issue and suggest aw
 ## resources
 
 * Colors
- * [Colorrrs](http://hex.colorrrs.com/): hex-rgb
- * [Spectral](http://jxnblk.com/Spectral/) by @jxnblk
- * [Paletton](http://paletton.com/)
+   - [Colorrrs](http://hex.colorrrs.com/): hex-rgb
+   - [Spectral](http://jxnblk.com/Spectral/) by @jxnblk
+   - [Paletton](http://paletton.com/)
 * CSS3 things
- * [CSS3 gen](http://css3gen.com/): text-shadow, box-shadow, gradients, etc.
- * [gradient generator](http://www.cssmatic.com/gradient-generator)
- * Photos! 
-  - [Picsum](https://picsum.photos/), ([list of all images](https://picsum.photos/images))
-  - [Unsplash](https://unsplash.com/)
+   - [CSS3 gen](http://css3gen.com/): text-shadow, box-shadow, gradients, etc.
+   - [gradient generator](http://www.cssmatic.com/gradient-generator)
+* Photos! 
+   - [Picsum](https://picsum.photos/), ([list of all images](https://picsum.photos/images))
+   - [Unsplash](https://unsplash.com/)
+* Javascript, API, etc.
+   - [JSONPlaceholder](https://jsonplaceholder.typicode.com/guide.html)
